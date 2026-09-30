@@ -211,7 +211,7 @@
         <h1 id="resultTitle" class="text-3xl sm:text-4xl text-white font-medium tracking-tighter uppercase"></h1>
         <p id="resultBody" class="text-neutral-400 font-light leading-relaxed"></p>
         <p id="resultHook" class="text-xs font-mono text-neutral-500"></p>
-        <p class="text-white/90 text-sm font-medium leading-relaxed border-t border-white/5 pt-4">E não para por aí: o método ensina a gravar com qualidade profissional em qualquer câmera ou celular, não só nesse ponto específico.</p>
+        <p class="text-white/90 text-sm font-medium leading-relaxed border-t border-white/5 pt-4">E não para por aí: qualidade profissional em qualquer câmera ou celular.</p>
       </div>
 
       <div class="animate-enter flex justify-center">
@@ -340,7 +340,7 @@
         <h3 class="text-lg text-white font-semibold tracking-tight">Antes e depois de quem já aplicou o método</h3>
 
         <div class="flex flex-col gap-3">
-          <p class="text-neutral-400 text-sm leading-relaxed">Claudemir grava a esposa. Antes, os dois ficavam frustrados com a qualidade do vídeo. Depois, sem comprar nada novo, o resultado mudou completamente.</p>
+          <p class="text-neutral-400 text-sm leading-relaxed">Claudemir grava a esposa. Sem comprar nada novo, o resultado mudou completamente.</p>
           <div class="grid grid-cols-2 gap-3">
             <div class="flex flex-col gap-2">
               <span class="text-[9px] font-mono text-neutral-500 uppercase tracking-widest">Antes</span>
@@ -354,7 +354,7 @@
         </div>
 
         <div class="flex flex-col gap-3">
-          <p class="text-neutral-400 text-sm leading-relaxed">Willian Capriata, do nicho de economia, estava cansado de dicas soltas na internet e continuava frustrado com o resultado. Não comprou nenhum equipamento novo.</p>
+          <p class="text-neutral-400 text-sm leading-relaxed">Willian Capriata, nicho de economia. Melhorou sem comprar equipamento novo.</p>
           <div class="grid grid-cols-2 gap-3">
             <div class="flex flex-col gap-2">
               <span class="text-[9px] font-mono text-neutral-500 uppercase tracking-widest">Antes</span>
@@ -368,7 +368,7 @@
         </div>
 
         <div class="flex flex-col gap-3">
-          <p class="text-neutral-400 text-sm leading-relaxed">Lucas já tinha equipamento, mas não sabia usar a base, e ainda gravava num espaço minúsculo.</p>
+          <p class="text-neutral-400 text-sm leading-relaxed">Lucas tinha equipamento, mas não sabia a base. Gravava num espaço minúsculo.</p>
           <div class="grid grid-cols-2 gap-3">
             <div class="flex flex-col gap-2">
               <span class="text-[9px] font-mono text-neutral-500 uppercase tracking-widest">Antes</span>
@@ -655,13 +655,13 @@
 
   var PROFILES = {
     luz: { title: "Criador na Penumbra", moduleId: "m2",
-      body: "Sua imagem sofre antes mesmo de você mexer em qualquer ajuste de câmera: é a luz que está sabotando o resultado. Isso se resolve rápido, geralmente sem comprar nada novo." },
+      body: "A luz está sabotando seu vídeo antes de qualquer ajuste de câmera. Resolve rápido, sem comprar nada novo." },
     imagem: { title: "Criador Tremido", moduleId: "m3",
-      body: "Foco, enquadramento e estabilidade ainda presos no modo automático comprometem a imagem, não importa o quão bom seja o assunto do vídeo." },
+      body: "Foco, enquadramento e estabilidade ainda no automático. O assunto pode ser ótimo, a imagem entrega amador." },
     audio: { title: "Criador Sem Som", moduleId: "m7",
-      body: "Vídeo bom com áudio ruim ainda é vídeo ruim, e geralmente o problema é posição de microfone e ambiente, não o microfone em si." },
+      body: "Áudio ruim derruba o vídeo mais bonito. Geralmente é posição de microfone, não o microfone em si." },
     edicao: { title: "Criador Travado na Edição", moduleId: "m8",
-      body: "Você grava, mas o vídeo morre na edição: falta um fluxo simples pra fechar e publicar sem travar horas num corte." }
+      body: "Você grava bem, mas o vídeo morre na edição. Falta um fluxo simples pra fechar rápido." }
   };
 
   var DEVICE_MODULE = { iphone: "m4", android: "m5", camera: "m6", nenhum: "m1" };
@@ -907,7 +907,7 @@
         '<span class="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Módulo ' + mod.n + '</span></div>' +
       '</div>' +
       '<h4 class="text-white font-semibold text-base leading-snug">' + mod.name + '</h4>' +
-      '<p class="text-neutral-400 text-sm font-light leading-relaxed">' + mod.desc + '</p>';
+      '<p class="text-neutral-400 text-sm font-light leading-relaxed">' + mod.resultado + '</p>';
     return el;
   }
 
@@ -945,11 +945,11 @@
     var list = document.getElementById("reasonList");
     list.innerHTML = "";
     var reasons = [
-      "A falta de fundamento é o que trava seus vídeos hoje, e é exatamente isso que o Módulo 01 resolve, antes de qualquer ajuste técnico.",
+      "Fundamento antes de técnica: o Módulo 01 resolve a raiz do problema.",
       deviceModId !== painModId
-        ? "Você grava com " + DEVICE_LABEL[deviceAnswer] + ", e existe um módulo inteiro dedicado a esse aparelho, não uma aula genérica de 'câmera' que serve pra qualquer um."
-        : "O módulo de imagem cobre exatamente o que trava seus vídeos hoje, com ajustes práticos de exposição e composição.",
-      "O curso termina onde a maioria trava de verdade: edição. O Módulo 08 mostra um fluxo rápido no CapCut e a Exportação Anti-Compressão pra Reels e YouTube."
+        ? "Módulo específico pro " + DEVICE_LABEL[deviceAnswer] + ", não uma aula genérica de câmera."
+        : "Ajustes práticos de exposição e composição, direto ao ponto.",
+      "Fecha com edição: fluxo rápido no CapCut e exportação sem perder qualidade."
     ];
     reasons.forEach(function(text, i){
       var item = document.createElement("div");
@@ -980,7 +980,7 @@
     document.getElementById("resultTitle").textContent = profile.title;
     document.getElementById("resultBody").textContent = profile.body;
     document.getElementById("resultHook").textContent =
-      "Você grava com " + DEVICE_LABEL[deviceAnswer] + ". Dentro do método completo, é no Módulo " + CURR_BY_ID[painModId].n + " (" + CURR_BY_ID[painModId].name + ") que isso é resolvido de verdade.";
+      DEVICE_LABEL[deviceAnswer] + " · Módulo " + CURR_BY_ID[painModId].n + ": " + CURR_BY_ID[painModId].name;
 
     var grid = document.getElementById("highlightGrid");
     grid.innerHTML = "";
